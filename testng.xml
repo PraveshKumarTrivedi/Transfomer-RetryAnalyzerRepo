@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="RetryFailedTestSuite">
+
+<listeners>
+<listener class-name = "Analyzer.MyTransfermation"/>
+</listeners>
+
+  <test name="RetryMultipleFailedTestCases">
+    <classes>
+    <class name="com.facebook.testcases.FLoginPageTest"/>
+    <class name="com.facebook.testcases.FRegistrationPageTest"/>
+    <class name="com.facebook.testcases.TransformerCheck"/>
+    </classes>
+  </test> <!-- RetryMultipleFailedTestCases -->
+</suite> <!-- RetryFailedTestSuite -->

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [FacebookAuromaton]">
+  <test name="FacebookAutomation Test(failed)">
+    <classes>
+      <class name="com.facebook.testcases.FLoginPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="verifyValidUserTest"/>
+        </methods>
+      </class> <!-- com.facebook.testcases.FLoginPageTest -->
+      <class name="com.facebook.testcases.FRegistrationPageTest">
+        <methods>
+          <include name="verifyCreateAnAccountTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.facebook.testcases.FRegistrationPageTest -->
+    </classes>
+  </test> <!-- FacebookAutomation Test(failed) -->
+</suite> <!-- Failed suite [FacebookAuromaton] -->
