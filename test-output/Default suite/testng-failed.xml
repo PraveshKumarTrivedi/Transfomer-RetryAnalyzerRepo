@@ -5,7 +5,7 @@
     <classes>
       <class name="com.facebook.testcases.FRegistrationPageTest">
         <methods>
-          <include name="verifyCreateAnAccountTest"/>
+          <include name="verifyCreateAnAccountTest" invocation-numbers="0 1"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>

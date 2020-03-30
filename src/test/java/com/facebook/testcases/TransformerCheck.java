@@ -16,5 +16,12 @@ public class TransformerCheck {
 	{
 		Assert.assertEquals(false, true);
 	}
+	
+	@Test
+	public void test3()
+	{
+		Assert.assertEquals(false, true);
+	}
+	
 
 }

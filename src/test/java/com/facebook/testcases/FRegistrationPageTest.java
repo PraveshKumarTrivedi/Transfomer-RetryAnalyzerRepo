@@ -20,7 +20,7 @@ public class FRegistrationPageTest extends FBase {
 	
 	FRegistrationPage fregispage;
 	TestUtil testsutil;
-	String sheetName = "CreateNewContact";
+	String sheetName = "Sheet3";
 	
 	public FRegistrationPageTest()
 	{
@@ -51,7 +51,7 @@ public class FRegistrationPageTest extends FBase {
 	
 	
 	@Test(priority=1, dataProvider="getNewAccountData")
-	public void verifyCreateAnAccountTest(String Firstname, String Surname, String Email, String Password,String DOB, String Gender ) throws InterruptedException
+	public void verifyCreateAnAccountTest(String Firstname, String Surname, String Email, String Password,String DOB, String Gender) throws InterruptedException
 	{
 		fregispage.verifyCreateAnAccount(Firstname, Surname, Email, Password, DOB, Gender);
 	}
