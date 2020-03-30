@@ -45,20 +45,20 @@ public class SampleTestCase extends FBase {
 		
 		driver.findElement(By.xpath("//label[contains(text(),'Custom')]")).click();
 		
-		/*(WebElement pronoun_drop = driver.findElement(By.xpath("//select[@class='_7-16 _5dba']"));
+		WebElement pronoun_drop = driver.findElement(By.xpath("//select[@class='_7-16 _5dba']"));
 		Select select_pronoun = new Select(pronoun_drop);
 		//select_pronoun.selectByValue("1");
-		select_pronoun.selectByVisibleText("She: \"Wish her a happy birthday!\"");*/
+		select_pronoun.selectByVisibleText("She: \"Wish her a happy birthday!\"");
 		
 		driver.findElement(By.name("preferred_pronoun")).click();
-		List<WebElement> dd_menu =  driver.findElements(By.xpath("//select[@class='_7-16 _5dba']//option"));
-		for(WebElement element: dd_menu)
+		/*List<WebElement> dd_menu =  driver.findElements(By.xpath("//select[@class='_7-16 _5dba']//option"));
+		for(WebEl/*ement element: dd_menu)
 		{
 			if(element.getText().equalsIgnoreCase("She: \"Wish her a happy birthday!\""))
 			{
 				element.click();
 			}
-		}
+		}*/
 		
 	}
 
