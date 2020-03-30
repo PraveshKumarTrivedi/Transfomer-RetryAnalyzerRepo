@@ -3,10 +3,14 @@
  */
 package com.facebook.pages;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import com.facebook.base.FBase;
 import com.facebook.util.TestUtil;
@@ -56,9 +60,28 @@ public class FRegistrationPage extends FBase{
 	@FindBy(how = How.XPATH, using="//button[@name='websubmit' and contains(text(),'Sign Up')]")
 	WebElement clickONSignUp;
 	
+	//Select Pronouncer 
+	@FindBy(how = How.NAME, using="preferred_pronoun")
+	WebElement pronouncer;
+	
+	@FindBy(how =  How.ID, using="u_0_11")
+	WebElement genederOptional;
+	
+	@FindBy(how = How.ID, using="u_0_13")
+	WebElement signUpbtn;
+	
 	public FRegistrationPage()
 	{
 		PageFactory.initElements(driver,this);
+	}
+	
+	public void selectPronouncer(String pronouncer)
+	{
+		WebElement pronoun_drop = driver.findElement(By.xpath("//select[@class='_7-16 _5dba']"));
+		Select select_pronoun = new Select(pronoun_drop);
+		//select_pronoun.selectByValue("1");
+		select_pronoun.selectByVisibleText(pronouncer);
+		
 	}
 	
 	public void verifyCreateAnAccount(String fn, String sn, String email, String newPwd,String dob, String sex) throws InterruptedException
@@ -74,6 +97,13 @@ public class FRegistrationPage extends FBase{
 		TestUtil.selectValueFromDropDown(year,dobArr[2]);
 		Thread.sleep(5000);
 		TestUtil.selectUserGender(sex);
+		if(sex.equals("Custom"))
+		{
+			selectPronouncer("She: \"Wish her a happy birthday!\"");
+		}
+		genederOptional.sendKeys("Children");
+		signUpbtn.click();
+		
 	}
 	
 	

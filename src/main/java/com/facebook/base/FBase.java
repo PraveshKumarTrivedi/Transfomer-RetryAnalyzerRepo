@@ -25,7 +25,7 @@ public class FBase {
 	{
 	try{
 			prop = new Properties();
-			FileInputStream source = new FileInputStream("D:/newworkspace1/FacebookAutomation/src/main/java/com/facebook/config/config.properties");
+			FileInputStream source = new FileInputStream("C:\\Users\\Vaio\\git\\Transfomer-RetryAnalyzerRepo\\Transfomer-RetryAnalyzerRepo\\src\\main\\java\\com\\facebook\\config\\config.properties");
 			prop.load(source);
 	   }
 	catch(FileNotFoundException e)
